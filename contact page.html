@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="unnamed.png" type="image/png">
+    <title>Kumbh Mela Prayagraj</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+
+        @keyframes loadingAnimation {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        head {
+            position: relative;
+        }
+
+
+
+  
+
+        #title-loading-bar {
+            height: 3px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            animation: loadingAnimation 1s ease-out;
+        }
+
+        .content {
+        display: none; 
+
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: top;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            background-color: #555;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #555;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #777;
+        }
+
+    .container {
+      padding: 20px;
+    }
+
+
+        main {
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: left;
+            padding: 1em;
+            position: bottom;
+            bottom: 0;
+            width: 100%;
+        }
+ 
+       header img {
+            width: 50px; /* Adjust the width of your logo */
+            height: 50px; /* Adjust the height of your logo */
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+     <div id="title-loading-bar"></div>
+
+    <script src="script.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulate a delay (you can replace this with actual loading tasks)
+    setTimeout(function() {
+        // Hide the loading bar
+        document.querySelector(' #title-loading-bar ' ).style.display = 'none';
+
+        // Display the content
+        document.querySelector('.content').style.display = 'block';
+    }, 2000); // Adjust the delay time as needed
+});
+
+</script>
+
+    <!-- Your page content goes here -->
+    <div class="content">
+
+    <header>
+           
+        <div class="logo-container">
+            <img src="unnamed.png" alt="Your Logo">
+        </div>
+        <h1>Kumbh Mela Prayagraj</h1>
+    
+
+    </header>
+
+    <nav>
+  
+        <a href="home page.html">Home</a>
+        <a href="about page.html">About</a>
+        <div class="dropdown">
+            <a href="#">Gallery</a>
+            <div class="dropdown-content">
+                <a href="image.html">Image</a>
+                <a href="vedio.html">Video</a>
+            </div>
+        </div>
+        <a href="table.html">Schedule</a>
+        <a href="contact page.html">Contact</a>
+        <a href="booking page.html">Book a Camp</a>
+
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Fill out the form below:</p>
+        </section>
+
+        <form action="#" method="post" id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+            <p>Contact Us:</p>
+    <p>Email: info@example.com</p>
+    <p>Phone: +91 9999999999</p>
+    <p>Sangam, Prayagraj, Uttar Pradesh - 211001 </p>
+    </footer>
+
+</div>
+
+</body>
+</html>

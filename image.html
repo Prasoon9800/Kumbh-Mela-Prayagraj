@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
+
+
+  <style>
+
+
+        @keyframes loadingAnimation {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        head {
+            position: relative;
+        }
+
+
+
+  
+
+        #title-loading-bar {
+            height: 3px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            animation: loadingAnimation 1s ease-out;
+        }
+
+        .content {
+        display: none; 
+
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: top;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            background-color: #555;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #555;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #777;
+        }
+
+    .container {
+      padding: 20px;
+    }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: left;
+            padding: 1em;
+            position: bottom;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        header img {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        main {
+            padding: 100px;
+
+
+        }
+
+
+        #content {
+            padding: 10px
+
+        }
+
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+     <div id="title-loading-bar"></div>
+
+    <script src="script.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulate a delay (you can replace this with actual loading tasks)
+    setTimeout(function() {
+        // Hide the loading bar
+        document.querySelector(' #title-loading-bar ' ).style.display = 'none';
+
+        // Display the content
+        document.querySelector('.content').style.display = 'block';
+    }, 2000); // 
+});
+
+</script>
+ 
+    <!-- Your page content goes here -->
+    <div class="content">
+
+    <header>
+        <div class="logo-container">
+            <img src="unnamed.png" alt="Your Logo">
+        </div>
+        <h1>Kumbh Mela Prayagraj</h1>
+    </header>
+
+    <nav>
+  
+        <a href="home page.html">Home</a>
+        <a href="about page.html">About</a>
+        <div class="dropdown">
+            <a href="#">Gallery</a>
+            <div class="dropdown-content">
+                <a href="image.html">Image</a>
+                <a href="home page.html">Video</a>
+            </div>
+        </div>
+        <a href="table.html">Schedule</a>
+        <a href="contact page.html">Contact</a>
+        <a href="booking page.html">Book a Camp</a>
+
+    </nav>
+
+<section>
+  <h1>Image Gallery</h1>
+</section>
+    <div class="gallery">
+        <img src="download (3).jpeg" alt="Image 1">
+        <img src="istockphoto-477260677-612x612.jpg" alt="Image 3">
+</div>
+</section>
+
+
+    <footer>
+                  <p>Contact Us:</p>
+    <p>Email: info@example.com</p>
+    <p>Phone: +91 9999999999</p>
+    <p>Sangam, Prayagraj, Uttar Pradesh - 211001 </p>
+
+    </footer>
+
+</div>
+    </div>
+</body>
+</html>
